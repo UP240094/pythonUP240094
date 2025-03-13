@@ -6,7 +6,7 @@ print(emptylist)
 
 ##2. Declare a list with more than 5 items
 
-schoolsupplieslist = ['pen', 'pencil', 'backpack', 'book', 'pencil collors', 'pencil sharpener']
+schoolsupplieslist = ['pen', 'pencil', 'backpack', 'book', 'pencil colors', 'pencil sharpener']
 print(schoolsupplieslist)
 
 ##3. Find the length of your list
