@@ -33,4 +33,28 @@ print(len(student))
 print(student['skills'])
 
 #mopdify the skills values by adding one or two skills
+student['skills'].append('Public Speaking',)
+student['skills'].append('Social skills',)
+
+print(student['skills'])
+
+#Get the dictionary keys as a list
+keys_list = list(student.keys())
+print(keys_list)
+
+# Change the dictionary to a list of 
+# tuples using _items()_ method
+studentlist = student.items()
+print(studentlist)
+
+#Delete one of the items in the dictionary
+
+
+del student['skills']
+print(student)
+
+##11. Delete one of the dictionaries
+
+del dog
+print (dog)
 
