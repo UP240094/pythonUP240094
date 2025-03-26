@@ -78,4 +78,76 @@ elif Grade_Alumno >= 0 and Grade_Alumno <= 49:
     print("you got a F")
 else:
     print("Invalid grade")   
-    
+
+    #   1. Check if the season is Autumn, Winter, Spring or Summer.
+    #  If the user input is:
+#    September, October or November, the season is Autumn.
+#    December, January or February, the season is Winter.
+#    March, April or May, the season is Spring
+#    June, July or August, the season is Summer
+
+Autumn = {'September', 'Septiembre', 'October', 'Octubre', 'November', 'Noviembre'}
+Winter = {'Dicember', 'Diciembre', 'January', 'Enero', 'February', 'Febrero'}
+Spring = {'March', 'Marzo', 'April', 'Abril', 'May', 'Mayo'}
+Summer = {'June', 'Junio', 'July', 'Julio', 'Agust', 'Agosto'}
+
+month = input("Enter the month: ")
+if month in Autumn:
+    print("The season is Autumn")
+elif month in Winter:
+    print("The season is Winter")
+elif month in Spring:
+    print("The season is Spring")
+elif month in Summer:
+    print("The season is Summer")
+else:
+    print("Invalid month")
+
+#2. The following list contains some fruits:
+ #    ```sh
+#    fruits = ['banana', 'orange', 'mango', 'lemon']
+#    ```
+#   If a fruit doesn't exist in the list 
+# add the fruit to the list and print the modified list. 
+# If the fruit exists
+#  print('That fruit already exist in the list')
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruit = input("Enter a fruit: ")
+if fruit in fruits:
+    print('That fruit already exists in the list')
+else:
+    fruits.append(fruit)
+    print('The fruit has been added to the list', fruits)
+
+### Exercises: Level 3
+
+#   1. Here we have a person dictionary. Feel free to modify it!
+
+#```py
+#        person={
+#    'first_name': 'Asabeneh',
+#    'last_name': 'Yetayeh',
+#    'age': 250,
+#    'country': 'Finland',
+#    'is_marred': True,
+#    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+#    'address': {
+#        'street': 'Space street',
+#        'zipcode': '02210'
+#    }
+#    }
+#```
+
+#   * Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
+#   * Check if the person dictionary has skills key, if so check if the person has 
+#     'Python' skill and print out the result.
+#   * If a person skills has only JavaScript and React, print('He is a front end developer'), 
+#     if the person skills has Node, Python, MongoDB, print('He is a backend developer'), 
+#     if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), 
+#     else print('unknown title') - for more accurate results more conditions can be nested!
+#   * If the person is married and if he lives in Finland, print the information in the following format:
+
+#```py
+#    Asabeneh Yetayeh lives in Finland. He is married.
+#```
