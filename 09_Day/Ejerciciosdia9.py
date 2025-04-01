@@ -122,7 +122,7 @@ else:
 
 ### Exercises: Level 3
 
-#   1. Here we have a person dictionary. Feel free to modify it!
+#   1. Here we have a person  dictionary. Feel free to modify it!
 
 #```py
 #        person={
@@ -148,6 +148,39 @@ else:
 #     else print('unknown title') - for more accurate results more conditions can be nested!
 #   * If the person is married and if he lives in Finland, print the information in the following format:
 
-#```py
-#    Asabeneh Yetayeh lives in Finland. He is married.
-#```
+person = {
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
+
+print(person)
+
+print('problem 1: Guet the keys in the middle')
+
+midskillskeys = len(person.get('skills'))//2
+
+print('The skills in the middle are ', person['skills'][midskillskeys])
+
+print('problematica 2: Checar si la persona tiene de habilidad el uso de python')
+
+# Problem 2: Check if the person has Python as a skill
+print('Problem 2: Check if the person has Python as a skill')
+
+if 'Python' in person['skills']:
+    print('Yes, the person has Python as a skill:', person['skills'])
+else:
+    print('The person does not have Python as a skill.')
+
+# Problem 3: Determine the developer type based on skills
+print('Problem 3: Determine the developer type based on skills')
+
+front_end_dev = 'JavaScript' in person['skills'] and 'React' in person['skills']
+back_end_dev = 'Node' in person['skills'] and 'Python' in person['skills'] and 'MongoDB' in person['skills']
