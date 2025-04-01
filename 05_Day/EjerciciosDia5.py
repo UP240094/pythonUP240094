@@ -204,3 +204,6 @@ Comparacion de valores absolutos como minimo y maximo:
 El valor absoluto minimo es mayor que el maximo: {}
 El valor absoluto maximo es mayor que el maximo: {}
 '''.format(ages, lower_age, max_age, median_age, average_age, range_ages, dif_min_avg, dif_max_avg, dif_min_avg > dif_max_avg, dif_max_avg > dif_min_avg))
+
+
+print("Revisado")

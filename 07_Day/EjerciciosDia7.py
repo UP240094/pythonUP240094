@@ -74,3 +74,4 @@ for item in oracion:
         count += 1
 print(count)
 
+print("Revisado")
