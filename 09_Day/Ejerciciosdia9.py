@@ -153,7 +153,7 @@ person = {
     'last_name': 'Yetayeh',
     'age': 250,
     'country': 'Finland',
-    'is_marred': True,
+    'is_married': True,
     'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
     'address': {
         'street': 'Space street',
@@ -169,8 +169,6 @@ midskillskeys = len(person.get('skills'))//2
 
 print('The skills in the middle are ', person['skills'][midskillskeys])
 
-print('problematica 2: Checar si la persona tiene de habilidad el uso de python')
-
 # Problem 2: Check if the person has Python as a skill
 print('Problem 2: Check if the person has Python as a skill')
 
@@ -184,3 +182,23 @@ print('Problem 3: Determine the developer type based on skills')
 
 front_end_dev = 'JavaScript' in person['skills'] and 'React' in person['skills']
 back_end_dev = 'Node' in person['skills'] and 'Python' in person['skills'] and 'MongoDB' in person['skills']
+full_stack_dev = 'React' in person['skills'] and 'Node' in person['skills'] and 'MongoDB' in person['skills']
+
+if front_end_dev == True and len(person['skills']) == 2 :
+    print("El programador es un (Front end developer)")
+elif back_end_dev == True and len(person['skills']) == 3:
+    print('El programador es un (Backend developer)')
+elif full_stack_dev == True:
+    print('El programador es un (Fullstack developer)')
+else:
+    print('unknown title')
+
+# Problem 4: Check if the person is married and lives in Finland
+print('Problem 4: Check if the person is married and lives in Finland')
+
+if person['is_married'] == True and 'Finland' in person['country']:
+    print('''
+     Asabeneh Yetayeh lives in finland, he is married
+    ''')
+else:
+    print('Una de las condiciones no coinciden')
