@@ -170,9 +170,9 @@ print('The sum of all odd numbers from 0 to 100 is:', sum(odd_numbers))
 ##Level 3
 
 ##
-from countries import countries_1
+from countries_1 import countries_1
 
-paisesland=[countries for countries in countries if 'land' in countries]
+paisesland=[countries for countries in countries_1 if 'land' in countries]
 print(paisesland)
 
 ##
@@ -184,10 +184,10 @@ for i in fruits:
 
 
 ##
-from countries_data import countries_2
+from countries_data import countries_data_1
 
 all_languages = set()
-for country in countries_1:
+for country in countries_data_1:
     all_languages.update(country['languages'])
 total_languages = len(all_languages)
 print("Total number of languages:", total_languages)
@@ -195,7 +195,7 @@ print("Total number of languages:", total_languages)
 
 ##
 language_count = {}
-for country in countries_1:
+for country in countries_data_1:
     for language in country['languages']:
         language_count[language] = language_count.get(language, 0) + 1
 
@@ -204,7 +204,7 @@ print("Ten most spoken languages:")
 for language, count in most_spoken_languages:
     print(f"{language}: {count}")
 
-most_populated_countries = sorted(countries_1, key=lambda x: x['population'], reverse=True)[:10]
+most_populated_countries = sorted(countries_data_1, key=lambda x: x['population'], reverse=True)[:10]
 print("Ten most populated countries:")
 for country in most_populated_countries:
     print(f"{country['name']}: {country['population']}")
