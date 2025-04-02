@@ -160,3 +160,51 @@ print('Even numbers:', even_numbers)
 print('The sum of all even numbers from 0 to 100 is:', sum(even_numbers))
 print('Odd numbers:', odd_numbers)
 print('The sum of all odd numbers from 0 to 100 is:', sum(odd_numbers))
+
+#3. Go to the data folder and use the [countries_data.py]
+# (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
+# 3.1. What are the total number of languages in the data
+# 3.2. Find the ten most spoken languages from the data
+# 3.3. Find the 10 most populated countries in the world
+
+##Level 3
+
+##
+from countries import countries_1
+
+paisesland=[countries for countries in countries if 'land' in countries]
+print(paisesland)
+
+##
+fruits = ['banana', 'orange', 'mango', 'lemon']
+conteo=-1
+for i in fruits:
+    print(fruits[conteo])
+    conteo=conteo -1
+
+
+##
+from countries_data import countries_2
+
+all_languages = set()
+for country in countries_1:
+    all_languages.update(country['languages'])
+total_languages = len(all_languages)
+print("Total number of languages:", total_languages)
+
+
+##
+language_count = {}
+for country in countries_1:
+    for language in country['languages']:
+        language_count[language] = language_count.get(language, 0) + 1
+
+most_spoken_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)[:10]
+print("Ten most spoken languages:")
+for language, count in most_spoken_languages:
+    print(f"{language}: {count}")
+
+most_populated_countries = sorted(countries_1, key=lambda x: x['population'], reverse=True)[:10]
+print("Ten most populated countries:")
+for country in most_populated_countries:
+    print(f"{country['name']}: {country['population']}")
