@@ -58,3 +58,4 @@ print(student)
 del dog
 print (dog)
 
+print("No se ejecuta")
