@@ -26,3 +26,22 @@ print("The new list is:", flattened_countries)
 
 # Exercise 5: Change the following list to a list of dictionaries.
 print("Exercise 5:")
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+countries_dict = [{'country': country.upper(), 'city': capital.upper()} for sublist in countries for (country, capital) in sublist]
+print("The list of dictionaries is:", countries_dict)
+
+# Exercise 6: Change the following list of lists to a list of concatenated strings.
+print("Exercise 6:")
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+names_concatenated = [' '.join([name[0].upper(), name[1].upper()]) for sublist in names for name in sublist]
+print("The list of concatenated strings is:", names_concatenated)
+
+# Exercise 7: Write a lambda function which can solve a slope or y-intercept of linear functions.
+print("Exercise 7:")
+slope = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1) if x2 != x1 else None
+y_intercept = lambda x, y, m: y - m * x if m is not None else None
+print(f"The slope is: {slope(2, 3, 4, 7)}")
+print(f"The y-intercept is: {y_intercept(2, 3, slope(2, 3, 4, 7))}")
+print(f"The y-intercept is: {y_intercept(4, 7, slope(2, 3, 4, 7))}")
+print(f"The y-intercept is: {y_intercept(0, 0, slope(2, 3, 4, 7))}")
+print(f"The y-intercept is: {y_intercept(2, 3, slope(2, 3, 4, 7))}")
