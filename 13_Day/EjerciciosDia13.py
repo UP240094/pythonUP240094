@@ -45,3 +45,5 @@ print(f"The y-intercept is: {y_intercept(2, 3, slope(2, 3, 4, 7))}")
 print(f"The y-intercept is: {y_intercept(4, 7, slope(2, 3, 4, 7))}")
 print(f"The y-intercept is: {y_intercept(0, 0, slope(2, 3, 4, 7))}")
 print(f"The y-intercept is: {y_intercept(2, 3, slope(2, 3, 4, 7))}")
+
+print("Revisado")

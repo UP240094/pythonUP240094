@@ -196,3 +196,4 @@ def same(lista):
     return ''
 print(same([1,2,3,4,'true']))
 
+print("Revisado")

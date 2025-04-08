@@ -208,3 +208,5 @@ most_populated_countries = sorted(countries_data_1, key=lambda x: x['population'
 print("Ten most populated countries:")
 for country in most_populated_countries:
     print(f"{country['name']}: {country['population']}")
+
+print("Revisado") #Explicame como funciona la funcion lambda, (no se trabaja en este modulo)
